@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jane George - Portfolio</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="./script.js"></script>
+
+        <!-- Google Fonts - Orbitron -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        
+        <!-- Google Fonts - Quantico -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="profile_name">Portfolio</div>
+            <div class="topdiv">
+            <!-- Navigation buttons -->
+                <a href="#about" class="topmenu button-style">About Me</a>
+                <a href="#skills" class="topmenu button-style">Skills</a>
+                <a onclick="downloadResume()" id="download-btn" class="button-style">Download Resume/CV</a>
+            </div>
+        </nav>
+
+        <!-- About Me -->
+        <section id="about-me" class="container">
+            <div class="about-me">
+                <h1>
+                    Hi, I'm
+                </h1>
+                <h2>
+                    Jane George!
+                </h2>
+                <p>
+                    A dedicated Computer Science student with a strong foundation
+                    and aspiring to be a Software Engineer
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div id="find-me">
+                <a href="#projects" id="projects" class="button-style">View Work</a>
+                <a id="hire-btn" class="button-style" onclick="hireMe()">Hire Me</a>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="images/html.png" />
+                    <h6 id="myHeading">HTML</h6>
+                    <p class="experience">2 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/css3.png"/>
+                    <h6 id="myHeading">CSS</h6>
+                    <p class="experience">2 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/javascript.png" />
+                    <h6 id="myHeading">JavaScript</h6>
+                    <p class="experience">2 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/flask.png"/>
+                    <h6 id="myHeading">Flask</h6>
+                    <p class="experience">2 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/ai.jpg"/>
+                    <h6 id="myHeading">AI</h6>
+                    <p class="experience">2 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/python.png"/>
+                    <h6 id="myHeading">Python</h6>
+                    <p class="experience">2 years experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div style="clear: both;"></div>
+
+                <div id="projects-container" class="projects-container">
+                    <div class="project-card">
+                        <h4 id="myHeading">System Dev</h4>
+                        <h3>Home server</h3>
+                        <p>
+                            Setting up a secure home server to host and deploy a smart
+                            camera surveillance app
+                        </p>                            
+                    </div>
+                    <div class="project-card">
+                        <h4 id="myHeading">Mobile App Dev</h4>
+                        <h3>Facial Recognition Doorbell</h3>
+                        <p>
+                            Using motion detection and AI-based threat analysis to build a smart
+                            camera app designed to monitor criminal activities
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h4 id="myHeading">System Dev</h4>
+                        <h3>Home Security System</h3>
+                        <p>
+                            Integrating motion sensors, surveillance cameras and real time alerts
+                            to create a safer living environment
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- Fallback Modal -->
+            <div id="email-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h3>Contact Me</h3>
+                    <p>Email directly: <span id="email-address">your.email@example.com</span></p>
+                    <button id="copy-email">Copy Email</button>
+                    <div class="webmail-options">
+                        <a class="webmail-btn gmail" target="_blank">Gmail</a>
+                        <a class="webmail-btn outlook" target="_blank">Outlook</a>
+                        <a class="webmail-btn yahoo" target="_blank">Yahoo Mail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+    
+</html>

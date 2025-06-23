@@ -1,0 +1,340 @@
+html {
+  padding: 0; 
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid #00F5D4;
+}
+
+.close {
+  color: #E0E0E0;
+}
+
+.modal-content h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #E0E0E0;
+}
+
+.webmail-options {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.webmail-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+}
+
+.gmail { background: #EA4335; }
+.outlook { background: #0072C6; }
+.yahoo { background: #720e9e; }
+
+#copy-email {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+body {
+  background-color: #0A0A0A;
+  margin: 0; /* 👈 Add this line */
+  overflow: auto; /* Ensures the body can scroll if content overflows */
+  height: 100%;
+}
+
+nav {
+  position: relative;
+  z-index: 1; /* Keep content above canvas */
+  background: rgba(10, 10, 10, 0.85); /* Semi-transparent dark layer */
+  backdrop-filter: blur(3px); /* Frosted glass effect */
+  margin: 10px; /* 👈 Add this line */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+  color: #E0E0E0;
+}
+
+.topmenu {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  text-decoration: none;
+}
+
+/* Base button style for both elements */
+.button-style {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #FF006E;
+  background: transparent;
+  color: #FF006E;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#hire-btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #00F5D4;
+  background: transparent;
+  color: #00F5D4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#hire-me:hover {
+  background-color: #00F5D4;
+  color: #2D2D2D;
+}
+
+/* Hover effect for all buttons */
+.button-style:hover {
+  background: #FF006E;
+  color: #2D2D2D;
+}
+
+/* Navigation buttons container */
+.topdiv {
+  display: flex;
+  gap: 10px; /* Space between nav buttons */
+}
+
+/* "Portfolio" text specific styling */
+.profile_name {
+  font-family: 'Quantico', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0; /* 👈 Ensure no margin */
+}
+
+h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 25px;
+  color: #E0E0E0;
+  width: 700px;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  margin-top: 150px;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 95px;
+  color: #E0E0E0;
+  width: 700px;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+p {
+  font-family: 'Titillium Web', sans-serif;
+  padding: 10px 20px;
+  font-size: 25px;
+  color: #E0E0E0;
+  width: 700px;
+  margin: 0;
+}
+
+#find-me {
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+img {
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Skills container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center skill cards in container */
+  padding-left: 20px;
+}
+
+/* Individual skill cards */
+.skill {
+  width: 290px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 10px 0;
+  border: 1px solid #00F5D4;
+  background: none !important; /* 👈 Add this line */
+}
+
+h6 {
+  font-family: 'Quantico', sans-serif;
+  background-color: #FF006E;
+  color: #2D2D2D;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* Text alignment */
+.skill p {
+  margin: 5px 0;
+  width: 100%;
+  text-align: center; /* Explicit center alignment */
+  padding-left: 0; /* Remove any previous left padding */
+  color: #E0E0E0 !important;
+}
+
+/* Experience text styling */
+.skill p:last-child {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-container {
+    justify-content: center; /* Center on mobile */
+  }
+  
+  .skill {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Skills container - Changed justify-content */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* Changed from center to left-align */
+}
+
+/* Individual skill cards - Keep existing styles */
+.skill {
+  width: 290px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 10px 0; /* Remove side margins */
+  color: #E0E0E0; /* Base color */
+  opacity: 1 !important; /* 👈 Explicitly set to 1 (default) */
+}
+
+.skill .experience {
+  color: #E0E0E0; /* Base color */
+}
+
+/* Responsive design adjustment */
+@media (max-width: 768px) {
+  .skills-container {
+    justify-content: flex-start; /* Changed from center */
+  }
+  
+  .skill {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0; /* Maintain vertical margin */
+  }
+}
+
+.projects-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* Remove fixed width (290px) and let it grow */
+  width: 100%; /* Allow container to fill available space */
+  max-width: 800px; /* Optional: Set a maximum width for larger screens */
+  margin: 20px;
+}
+
+.project-card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  border: 1px solid #00F5D4;
+  /* Add flex-shrink to prevent cards from shrinking */
+  flex-shrink: 0; /* 👈 Prevents cards from squishing */
+  border-radius: 8px;
+}
+
+.project-card p {
+  width: 150px;
+  margin-left: 0;
+  padding: 5px;   /* Remove left padding */
+  text-indent: 0;    /* Explicitly reset text indentation */
+  font-size: 15px;
+}
+
+.project-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 5px;
+  color: #E0E0E0;
+}
+
+h4 {
+  font-family: 'Quantico', sans-serif;
+  color: #2D2D2D;
+  background-color: #FF006E;
+  border-radius: 8px;
+  font-family: 'Titillium Web', sans-serif;
+  display: inline-block; /* Makes the element shrink-to-fit */
+  width: fit-content;    /* Modern browsers (optional) */
+  padding: 5px;
+  margin-left: 5px;
+  font-family: 'Quantico', sans-serif;
+}
+
+img {
+  background-color: white;
+}
